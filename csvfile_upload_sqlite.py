@@ -10,6 +10,9 @@ import re
 import pandasql as ps
 
 
+# Set the page configuration
+st.set_page_config(page_title="SQL Query Retrieval App", layout="centered")
+
 # Function to load CSS from a file
 def load_css(file_name):
     with open(file_name) as f:
@@ -21,8 +24,7 @@ st.markdown(load_css("style.css"), unsafe_allow_html=True)
 # Set the PATH for ffmpeg
 os.environ['PATH'] += os.pathsep + r'C:\jcffmpeg\bin'
 
-# Set the page configuration
-st.set_page_config(page_title="SQL Query Retrieval App", layout="centered")
+
 
 # Custom CSS for a fancy background
 st.markdown(
