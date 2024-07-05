@@ -81,12 +81,7 @@ def read_sql_query(sql, df):
 st.title("App to Retrieve SQL Data")
 
 # File uploader for CSV
-uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
-if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-    df_name = "df"  # Name for the dataframe in the prompt
-    st.write("Data loaded successfully:")
-    st.dataframe(df.head())
+
 
 st.markdown("### Record your question")
 st.markdown("Press the button below to start recording your question.")
@@ -103,7 +98,12 @@ if st.button("Record"):
 transcription = st.text_area("Input Question", value=st.session_state.transcription, height=100)
 
 
-
+uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
+if uploaded_file is not None:
+    df = pd.read_csv(uploaded_file)
+    df_name = "df"  # Name for the dataframe in the prompt
+    st.write("Data loaded successfully:")
+    st.dataframe(df.head())
 
     # Dynamically create the prompt based on the DataFrame columns
     columns = ', '.join(df.columns)
