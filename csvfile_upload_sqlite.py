@@ -25,26 +25,6 @@ st.markdown(load_css("style.css"), unsafe_allow_html=True)
 os.environ['PATH'] += os.pathsep + r'C:\jcffmpeg\bin'
 
 
-
-# Custom CSS for a fancy background
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background: linear-gradient(135deg, #74ebd5, #ACB6E5);  /* Gradient background */
-        padding: 2rem;
-        border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    h1, h2, h3, h4, h5, h6 {
-        color: #333333;  /* Sets a darker color for headers */
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);  /* Adds a subtle text shadow for clarity */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 # Load environment variables
 load_dotenv()
 
