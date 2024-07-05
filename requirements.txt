@@ -1,0 +1,13 @@
+streamlit
+google-generativeai
+python-dotenv
+langchain
+PyPDF2
+chromadb
+pyaudio
+faiss-cpu
+pdf2image
+openai-whisper
+sqlite-utils
+certifi
+pandasql
