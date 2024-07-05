@@ -11,12 +11,12 @@ import pandasql as ps
 
 
 # Function to load CSS from a file
-def load_css(style):
-    with open(style) as f:
+def load_css(file_name):
+    with open(file_name) as f:
         return f"<style>{f.read()}</style>"
 
 # Load custom CSS
-st.markdown(load_css("styles.css"), unsafe_allow_html=True)
+st.markdown(load_css("style.css"), unsafe_allow_html=True)
 
 # Set the PATH for ffmpeg
 os.environ['PATH'] += os.pathsep + r'C:\jcffmpeg\bin'
