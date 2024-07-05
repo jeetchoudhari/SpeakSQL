@@ -9,6 +9,15 @@ import whisper
 import re
 import pandasql as ps
 
+
+# Function to load CSS from a file
+def load_css(style):
+    with open(style) as f:
+        return f"<style>{f.read()}</style>"
+
+# Load custom CSS
+st.markdown(load_css("styles.css"), unsafe_allow_html=True)
+
 # Set the PATH for ffmpeg
 os.environ['PATH'] += os.pathsep + r'C:\jcffmpeg\bin'
 
@@ -89,7 +98,7 @@ st.markdown("Press the button below to start recording your question.")
 if 'transcription' not in st.session_state:
     st.session_state.transcription = ""
 
-if st.button("Record"):
+if st.button("Record", key="record_button"):
     with st.spinner("Recording... Please wait."):
         record('output1.wav')
         st.success("Recording completed!")
