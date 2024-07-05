@@ -20,7 +20,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background: rgba(255, 255, 255, 0.7);  /* Increases opacity to reduce blur effect */
+        background: linear-gradient(135deg, #74ebd5, #ACB6E5);  /* Gradient background */
         padding: 2rem;
         border-radius: 15px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
