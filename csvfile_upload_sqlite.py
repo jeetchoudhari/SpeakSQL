@@ -78,7 +78,7 @@ def read_sql_query(sql, df):
         return pd.DataFrame()
 
 # Streamlit App
-st.title("App to Retrieve SQL Data")
+st.title("SpeakSQL: App to Retrieve Data")
 
 # File uploader for CSV
 
